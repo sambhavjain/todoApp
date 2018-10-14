@@ -12,11 +12,14 @@ export default class CompletedTask extends Component {
     this.props.addToActiveTasks(JSON.parse(e.target.value))
   }
 
+
+
   render() {
   	let todoList = []
   	todoList = this.props.list.map((obj,index)=>{
   		return <li value={obj} key={index}>
           <input type="checkbox" value={JSON.stringify(obj)}/><label>{obj.category}</label><p>{obj.task}</p>
+         {/* <button className="delete">Delete</button>*/}
         </li>
   	})
 

@@ -53,7 +53,7 @@ export default class Todo extends Component {
           deletedIndex = index
         }
       })
-      this.completedList = this.completedList.splice(1,deletedIndex)
+      this.completedList.splice(deletedIndex, 1)
       this.setState({completedList: this.completedList})
     }
   }
@@ -67,10 +67,11 @@ export default class Todo extends Component {
           deletedIndex = index
         }
       })
-      this.todoList = this.todoList.splice(1,deletedIndex)
+      this.todoList.splice(deletedIndex, 1)
       this.setState({todoList: this.todoList})
     }
   }
+
 
   render() {
     return (
@@ -80,7 +81,7 @@ export default class Todo extends Component {
         {this.state.openModal ? <Modal closeModal={this.closeModal} addTask={this.addNewTask}/> : null}
         <div className="taskContainer">
           {this.todoList.length === 0 && this.completedList.length === 0 ? <EmptyList msg="No Task Added" /> : <TodoList addToCompletedTasks={this.addToCompletedTasks} list={this.state.todoList}/>}
-          {this.todoList.length !== 0 || this.completedList.length !== 0 ? <CompletedTask list={this.state.completedList} addToActiveTasks={this.addToActiveTasks} /> : null}
+          {this.todoList.length !== 0 || this.completedList.length !== 0 ? <CompletedTask list={this.state.completedList} addToActiveTasks={this.addToActiveTasks} deleteTask={this.removeFromCompletedList}/> : null}
         </div>
       </div>
     );

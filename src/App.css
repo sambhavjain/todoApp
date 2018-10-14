@@ -94,10 +94,12 @@
 .listContainer {
   margin: auto;
   width: 30%;
+  max-height: 30%;
 }
 
 .taskContainer {
   margin: auto;
+  overflow: scroll;
 }
 
 .listContainer h4 {
