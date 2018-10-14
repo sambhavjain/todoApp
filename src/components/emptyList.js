@@ -6,7 +6,7 @@ export default class EmptyList extends Component {
   }
   render() {
     return (
-      <p>No Task pending</p>
+      <p>{this.props.msg}</p>
     );
   }
 }
