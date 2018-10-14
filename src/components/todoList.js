@@ -21,13 +21,11 @@ export default class TodoList extends Component {
   	})
 
     return (
-      <div>
+      <div className="listContainer">
       	<h4>Your Active Tasks</h4>
-      	<div className="listContainer" onChange={(e)=>this.handleCheck(e)}>
-      		<ul>
-      		{todoList}
-      		</ul>
-      	</div>
+    		<ul className="list" onChange={(e)=>this.handleCheck(e)}>
+    		{todoList}	
+    		</ul>
       </div>
     );
   }

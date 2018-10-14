@@ -6,6 +6,7 @@
   max-width: 1080px;
   max-height: 768px;
   margin: auto;
+  padding-top: 7.5%;
 }
 
 .addTaskButton {
@@ -14,6 +15,7 @@
   color: white;
   font-size: 16px;
   padding: 10px 20px;
+  font-family: Lato, sans-serif;
 }
 
 .modal {
@@ -68,10 +70,6 @@
   font-size: 16px;
 }
 
-.listContainer ul {
-  list-style: none;
-}
-
 .buttonContainer {
   text-align: center;
 }
@@ -81,7 +79,8 @@
   color: white;
   font-size: 12px;
   padding: 8px 14px;
-  margin-right: 8px
+  margin-right: 8px;
+  font-family: Lato, sans-serif;
 }
 
 .primary {
@@ -92,12 +91,54 @@
   background-color: #e43e31;
 }
 
+.listContainer {
+  margin: auto;
+  width: 30%;
+}
 
-@keyframes App-logo-spin {
+.taskContainer {
+  margin: auto;
+}
+
+.listContainer h4 {
+  padding: 30px 0 10px;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #333;
+}
+
+.listContainer ul {
+  list-style: none;
+}
+
+.list li {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.list li > input[type='checkbox'] {
+  margin: 5px 10px;
+  /*float: left; */
+}
+
+.listContainer label {
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.list p {
+  margin: 0;
+  font-size: 12px;
+  padding-left: 50px;
+  line-height: 1.2;
+}
+
+
+
+/*@keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+}*/

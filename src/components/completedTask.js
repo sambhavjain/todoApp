@@ -21,13 +21,11 @@ export default class CompletedTask extends Component {
   	})
 
     return (
-      <div>
+      <div className="listContainer">
       	<h4>Completed Tasks</h4>
-      	<div onChange={(e)=>this.handleCheck(e)}>
-          <ul>
-      		  {todoList}
-      		</ul>
-      	</div>
+        <ul className="list" onChange={(e)=>this.handleCheck(e)}>
+    		  {todoList}
+    		</ul>
       </div>
     );
   }

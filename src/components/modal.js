@@ -39,10 +39,10 @@ export default class Modal extends Component {
 		      		<label>Task</label>
 		      		<input name="task" type="text" />
 	      		</li>
-	      		<li>
+	      		{/*<li>
 		      		<label>Place</label>
 		      		<input name="place" type="text" />
-	      		</li>
+	      		</li>*/}
 	      	</ul>
 	      	<div className="buttonContainer">
 	      		<button className="buttonClass primary" onClick={this.addTask}>Add</button>
