@@ -16,16 +16,17 @@ export default class TodoList extends Component {
   	let todoList = []
   	todoList = this.props.list.map((obj,index)=>{
   		return <li key={index}>
-  				<input type="checkbox" value={JSON.stringify(obj)}/><label>{obj.category}</label>
+  				<input type="checkbox" value={JSON.stringify(obj)}/><label>{obj.category}</label><p>{obj.task}</p>
   			</li>
   	})
 
     return (
       <div>
       	<h4>Your Active Tasks</h4>
-      	<div onChange={(e)=>this.handleCheck(e)}>
+      	<div className="listContainer" onChange={(e)=>this.handleCheck(e)}>
+      		<ul>
       		{todoList}
-      		
+      		</ul>
       	</div>
       </div>
     );

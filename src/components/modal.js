@@ -29,20 +29,25 @@ export default class Modal extends Component {
     return (
       <div id="myModal" className="modal"> 
       	<div className="modal-content" onChange={(e)=>this.handleChange(e)}>
-      		<li>
-	      		<label>Categaory</label>
-	      		<input name="category" type="text" />
-      		</li>
-      		<li>
-	      		<label>Task</label>
-	      		<input name="task" type="text" />
-      		</li>
-      		<li>
-	      		<label>Place</label>
-	      		<input name="place" type="text" />
-      		</li>
-      		<button onClick={this.addTask}>Add</button>
-      		<button onClick={this.props.closeModal}>Close</button>
+      		<header className="modalHeader">Add Your Task</header>
+	      	<ul>
+	      		<li>
+		      		<label>Category</label>
+		      		<input name="category" type="text" />
+	      		</li>
+	      		<li>
+		      		<label>Task</label>
+		      		<input name="task" type="text" />
+	      		</li>
+	      		<li>
+		      		<label>Place</label>
+		      		<input name="place" type="text" />
+	      		</li>
+	      	</ul>
+	      	<div className="buttonContainer">
+	      		<button className="buttonClass primary" onClick={this.addTask}>Add</button>
+	      		<button className="buttonClass secondary" onClick={this.props.closeModal}>Close</button>
+	      	</div>
       	</div>
       </div>
     );

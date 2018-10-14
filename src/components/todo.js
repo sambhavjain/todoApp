@@ -74,7 +74,7 @@ export default class Todo extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="container">
         <h3>Todo Application</h3>
         <button className="addTaskButton" onClick={()=>this.openModal()}>Add Task</button>
         {this.state.openModal ? <Modal closeModal={this.closeModal} addTask={this.addNewTask}/> : null}

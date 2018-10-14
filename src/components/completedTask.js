@@ -16,7 +16,7 @@ export default class CompletedTask extends Component {
   	let todoList = []
   	todoList = this.props.list.map((obj,index)=>{
   		return <li value={obj} key={index}>
-          <input type="checkbox" value={JSON.stringify(obj)}/><label>{obj.category}</label>
+          <input type="checkbox" value={JSON.stringify(obj)}/><label>{obj.category}</label><p>{obj.task}</p>
         </li>
   	})
 
@@ -24,8 +24,9 @@ export default class CompletedTask extends Component {
       <div>
       	<h4>Completed Tasks</h4>
       	<div onChange={(e)=>this.handleCheck(e)}>
-      		{todoList}
-      		
+          <ul>
+      		  {todoList}
+      		</ul>
       	</div>
       </div>
     );
